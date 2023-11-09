@@ -1,0 +1,88 @@
+/* CSS custom properties (variables) defined for consistent theming throughout the application. */
+:root {
+    --primary-color: #f8f8f7; /* Light grey background color */
+    --secondary-color: #fa5650; /* Vibrant red accent color */
+    --text-color: #333; /* Dark grey text color */
+    --fav-color: #ff9500; /* Orange color for favorite items */
+    --border-color: #d7d7d7; /* Light grey border color */
+}
+
+/* Global body styles, setting the font and background color from the variables. */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Sets a modern sans-serif font. */
+    color: var(--text-color); /* Applies the text color variable. */
+    background-color: var(--primary-color); /* Sets the primary background color. */
+}
+
+/* Styles for div elements, commonly used as containers. */
+div {
+    max-width: 800px; /* Maximum width to prevent the container from looking too wide on larger screens. */
+    margin: 40px auto; /* Centers the div with automatic horizontal margins and adds vertical spacing. */
+    padding: 20px; /* Padding inside the div for spacing around the content. */
+    background: white; /* Solid white background color. */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds subtle shadow for a layered effect. */
+}
+
+/* Paragraph styles, used for text content. */
+p {
+    color: var(--secondary-color); /* Applies the secondary color for text to stand out. */
+    text-align: center; /* Centers the text within the paragraph. */
+}
+
+/* Unified styles for input fields, select dropdowns, and buttons. */
+input[type="text"], select, button {
+    padding: 10px; /* Padding for comfort. */
+    margin: 10px 0; /* Vertical spacing between elements. */
+    border: 1px solid var(--border-color); /* Border color from variable. */
+    border-radius: 5px; /* Slightly rounded corners for a modern look. */
+    display: block; /* Makes elements block-level for stacking vertically. */
+    width: 100%; /* Full-width elements for a clean, aligned appearance. */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height. */
+}
+
+/* Additional specific styles for buttons. */
+button {
+    padding: 15px 30px; /* Larger padding for a bigger click area. */
+    font-size: 16px; /* Larger font size for readability. */
+    font-weight: 600; /* Bold font weight for emphasis. */
+    text-align: center; /* Center text inside the button. */
+    vertical-align: middle; /* Align inline elements or table-cell box vertically. */
+    line-height: 1.5; /* Spacing between lines of text. */
+    border: none; /* Removes the border for button elements. */
+    border-radius: 8px; /* More pronounced rounded corners for buttons. */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects. */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adds shadow to buttons for depth. */
+    cursor: pointer; /* Changes cursor to indicate clickable items. */
+    margin: 10px 0; /* Vertical margin for spacing. */
+    display: inline-block; /* Allows setting width and vertical margins/padding. */
+    width: auto; /* Auto width to wrap content. */
+    white-space: nowrap; /* Prevents text wrapping in the button. */
+}
+
+/* Hover and focus styles for button elements to provide visual feedback. */
+button:hover, button:focus {
+    background-color: darken(var(--secondary-color), 10%); /* Darkens the button background color on hover/focus. */
+    transform: translateY(-2px); /* Slight upward movement for a 'pop' effect. */
+    outline: none; /* Removes the default focus outline. */
+}
+
+/* Specific style for 'favorite' buttons, using the fav-color variable. */
+button.fav-button {
+    background-color: var(--fav-color); /* Orange background for favorites. */
+    color: white; /* White text for contrast. */
+}
+
+/* Specific styles for the 'search' button. */
+.search-button {
+    background-color: var(--secondary-color); /* Vibrant red background for search button. */
+    color: white; /* White text for contrast. */
+    width: 100%; /* Full width for a block-level appearance. */
+}
+
+/* Media query for responsiveness on smaller screens, such as tablets. */
+@media (max-width: 768px) {
+    button {
+        padding: 10px 20px; /* Smaller padding for smaller screens. */
+        font-size: 14px; /* Smaller font size for smaller screens. */
+    }
+}

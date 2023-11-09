@@ -1,0 +1,50 @@
+/* Removes default list styling and resets margins and padding for a cleaner look. */
+ul {
+    list-style: none; /* No bullets or numbers shown before each list item. */
+    margin: 0; /* No default margin applied to the list. */
+    padding: 0; /* No default padding applied to the list. */
+}
+
+/* Styles each list item with a common design theme. */
+li {
+    background-color: var(--primary-color); /* Uses CSS custom property for the primary background color. */
+    color: var(--text-color); /* Uses CSS custom property for the text color. */
+    padding: 15px 20px; /* Adds padding inside each list item for spacing around the content. */
+    margin: 5px 0; /* Adds vertical margin for spacing between list items. */
+    border-radius: 5px; /* Rounds the corners of the list items. */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow below each list item for depth. */
+    transition: background-color 0.3s ease; /* Animates the background color change when hovered. */
+    display: flex; /* Uses Flexbox for internal layout, aligning child elements. */
+    justify-content: space-between; /* Spaces out child elements to start and end edges. */
+    align-items: center; /* Centers child elements vertically. */
+    border: 1px solid var(--border-color); /* Adds a border with a custom property color. */
+}
+
+/* Adds interactivity by changing the list item's appearance on hover. */
+li:hover {
+    background-color: var(--secondary-color); /* Changes the background color on hover. */
+    color: white; /* Changes the text color on hover for contrast. */
+    cursor: pointer; /* Changes the cursor to indicate the item is clickable. */
+}
+
+/* Adds a top border to all list items except the first for visual separation. */
+li + li {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Styles for the track name and artist name elements. */
+li span.trackName,
+li span.artistName {
+    display: block; /* Makes the span elements behave like block-level elements. */
+}
+
+/* Adds emphasis to the track name through bold font. */
+span.trackName {
+    font-weight: bold; /* Makes the track name text bold. */
+}
+
+/* Styles the artist name with a smaller font size and a lighter color for hierarchy. */
+span.artistName {
+    font-size: 0.9em; /* Reduces the font size to de-emphasize the artist name. */
+    color: #666; /* Sets the artist name to a lighter color for visual hierarchy. */
+}

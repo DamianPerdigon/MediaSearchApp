@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component renders correctly and matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      placeholder="Search for content"
+      type="text"
+      value=""
+    />
+    <select>
+      <option
+        value="all"
+      >
+        All
+      </option>
+      <option
+        value="music"
+      >
+        Music
+      </option>
+      <option
+        value="movie"
+      >
+        Movies
+      </option>
+      <option
+        value="podcast"
+      >
+        Podcasts
+      </option>
+      <option
+        value="audiobook"
+      >
+        Audiobooks
+      </option>
+    </select>
+    <button>
+      Search
+    </button>
+    <ul />
+    <h2>
+      Favorites
+    </h2>
+    <div>
+      <h3>
+        Music
+      </h3>
+      <ul />
+    </div>
+    <div>
+      <h3>
+        Movie
+      </h3>
+      <ul />
+    </div>
+    <div>
+      <h3>
+        Podcast
+      </h3>
+      <ul />
+    </div>
+    <div>
+      <h3>
+        Audiobook
+      </h3>
+      <ul />
+    </div>
+  </div>
+</DocumentFragment>
+`;

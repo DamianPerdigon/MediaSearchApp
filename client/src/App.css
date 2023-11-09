@@ -1,0 +1,41 @@
+/* Reset default margin and padding for the body and html elements 
+   to remove any space around the edges of the page. 
+   Set the background color and text color using CSS variables, 
+   and apply a universal font family. */
+   body, html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color); /* Use the primary color variable for the background. */
+    color: var(--text-color); /* Use the text color variable for the text. */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Set a clean, sans-serif font. */
+  }
+  
+  /* Center-align text for any div element. */
+  div {
+    text-align: center;
+  }
+  
+  /* Style for the main heading (h1) element. 
+     Apply the secondary color variable and add top and bottom margins. */
+  h1 {
+    color: var(--secondary-color); /* Use the secondary color variable for the heading text. */
+    margin-top: 20px; /* Add space above the heading. */
+    margin-bottom: 40px; /* Add space below the heading. */
+  }
+  
+  /* Define a container for search results with automatic margins to center it,
+     a width of 80% of the viewport, and a maximum width of 960px. */
+  .search-results-container {
+    margin: auto; /* Center the container within its parent. */
+    width: 80%; /* By default, the container takes up 80% of the viewport width. */
+    max-width: 960px; /* The container's width will not exceed 960px. */
+  }
+  
+  /* A media query for screen sizes with a maximum width of 768px (tablets and smaller devices). 
+     Adjusts the width of the search results container for these screen sizes. */
+  @media (max-width: 768px) {
+    .search-results-container {
+        width: 95%; /* On smaller screens, the container takes up more of the viewport width. */
+    }
+  }
+  
